@@ -1,4 +1,34 @@
 ## Task 1. Inserting values to th table
+```
+INSERT INTO pizzeria (id,name,rating)
+VALUES 
+(7,'NYP',3.8),
+(8,'mshkfrdd',5),
+(9,'mamaitalia',4.5),
+(10,'DINOCO',4.8),
+(11,'Pizzajat',3.3),
+(12,'Bratzhan',4.4),
+(13,'cheeseplace',4.9),
+(14,'walmart',2.4),
+(15,'tesco',4.2);
+```
+![image](https://github.com/piviich/db_practice/assets/144881369/046a4e20-33d9-4b51-b65d-e76c294eae23)
+
+```
+INSERT INTO person_visits (id,person_id,pizzeria_id,visit_date)
+VALUES (20,5,6,'2022-02-12'),
+(21,5,3,'2022-02-14'),
+(22,16,1,'2022-03-21'),
+(23,12,2,'2022-03-12'),
+(24,6,2,'2022-05-26'),
+(25,17,1,'2022-07-29'),
+(26,19,4,'2022-12-05'),
+(27,15,5,'2022-12-07'),
+(28,19,6,'2022-02-11'),
+(29,4,3,'2022-08-13');
+ 
+```
+![image](https://github.com/piviich/db_practice/assets/144881369/89106db0-6f87-437a-a196-1a8b94938799)
 
 ```
 INSERT INTO menu (id, pizzeria_id, pizza_name, price)
