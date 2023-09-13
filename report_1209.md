@@ -79,3 +79,21 @@ VALUES (21,10,5,'2023-02-05'),
 (30,15,13,'2022-05-01');
 ```
 ![image](https://github.com/piviich/db_practice/assets/144881369/d21cd84f-dad0-4fec-bd2c-4aef4ab4dec1)
+
+##Task 2. Make a select statement which returns all person's names and person's ages 
+from the city ‘[any]’
+```
+SELECT (name, age)
+FROM person WHERE address='kazan'
+
+```
+![image](https://github.com/piviich/db_practice/assets/144881369/e488163a-340b-498e-9273-dbe35a168449)
+
+##Task 3. Make a select statement which returns names , ages for all women from the 
+city ‘[any]. Yep, and sort result by name
+
+```
+SELECT (name, age, gender)
+FROM person WHERE gender ='female' AND address='Moscow' ORDER BY name;
+```
+![image](https://github.com/piviich/db_practice/assets/144881369/cfde2245-7fb4-4645-99a5-f758244c1a8e)
