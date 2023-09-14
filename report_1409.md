@@ -11,9 +11,10 @@ SELECT id, name FROM person ORDER BY pizzeria_id, pizza_name
 ## Task 2.
 
 ```
-SELECT id,name,'person' AS source FROM person
-UNION
-SELECT pizzeria_id, pizza_name, 'menu' AS source FROM menu ORDER BY source,name
+SELECT name,'person' AS source FROM person
+UNION ALL
+SELECT pizza_name, 'menu' AS source FROM menu ORDER BY source,name
 ```
-![image](https://github.com/piviich/db_practice/assets/144881369/bc2ab110-49be-44b0-9a06-a015519e12b6)
+![image](https://github.com/piviich/db_practice/assets/144881369/21ce41b0-00e0-4009-b10b-5a60f003478b)
+
 
