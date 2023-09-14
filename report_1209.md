@@ -117,8 +117,11 @@ ORDER BY rating DESC;
 duplication) who visited pizzerias in a period from [any date period]
 (including all days) or visited pizzeria with identifier 2. Also include ordering 
 ```
-
+SELECT DISTINCT person_id FROM person_visits
+WHERE visit_date BETWEEN '2022-01-01' AND '2022-01-04';
 ```
+![image](https://github.com/piviich/db_practice/assets/144881369/1579873d-98f2-4d9e-abba-c74d7d45391f)
+
 
  ## Task 6 Make a select statement which returns person's names (based on internal 
 query in SELECT clause) who made orders for the menu with identifiers [3 
