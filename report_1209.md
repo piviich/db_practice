@@ -97,3 +97,40 @@ SELECT (name, age, gender)
 FROM person WHERE gender ='female' AND address='Moscow' ORDER BY name;
 ```
 ![image](https://github.com/piviich/db_practice/assets/144881369/cfde2245-7fb4-4645-99a5-f758244c1a8e)
+
+##Task 4.Make 2 syntax different select statements which return a list of pizzerias 
+(pizzeria name and rating) with rating between 3.5 and 5 points (including 
+limit points) and ordered by pizzeria rating.
+```
+SELECT name,rating FROM pizzeria
+WHERE rating BETWEEN 3.5 AND 5
+ORDER BY rating DESC;
+```
+```
+SELECT name,rating FROM pizzeria
+WHERE rating >3.5
+ORDER BY rating DESC;
+```
+![image](https://github.com/piviich/db_practice/assets/144881369/0fb77f7a-399d-4132-8a7e-a988377fc428)
+
+##Task 5. Make a select statement which returns the person's identifiers (without 
+duplication) who visited pizzerias in a period from [any date period]
+(including all days) or visited pizzeria with identifier 2. Also include ordering 
+```
+
+```
+
+##Task 6 Make a select statement which returns person's names (based on internal 
+query in SELECT clause) who made orders for the menu with identifiers [3 
+dates and]. 
+``` 
+SELECT name FROM person WHERE id IN (SELECT person_id FROM person_order WHERE order_date = '2022-01-01' OR order_date = '2022-01-04')
+```
+![image](https://github.com/piviich/db_practice/assets/144881369/b3026756-8a75-4442-b526-72d6f247f237)
+
+##Task 7. Make a select to person table that returning (true or false) if person_name == 
+‘[any]’ exists in table
+```
+SELECT EXISTS (SELECT * FROM person WHERE name = 'Anna' ) AS Result;
+
+```
