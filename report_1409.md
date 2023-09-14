@@ -1,4 +1,4 @@
-![image](https://github.com/piviich/db_practice/assets/144881369/29ec8faa-5d43-4b42-83fe-2a4f2980f13c) ## Task 1. 
+ ## Task 1. 
 ```
 
 SELECT pizzeria_id, pizza_name FROM menu
