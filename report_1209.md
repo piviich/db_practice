@@ -1,4 +1,4 @@
-## Task 1. Inserting values to th table
+ ## Task 1. Inserting values to th table
 ```
 INSERT INTO pizzeria (id,name,rating)
 VALUES 
@@ -80,7 +80,7 @@ VALUES (21,10,5,'2023-02-05'),
 ```
 ![image](https://github.com/piviich/db_practice/assets/144881369/d21cd84f-dad0-4fec-bd2c-4aef4ab4dec1)
 
-##Task 2. Make a select statement which returns all person's names and person's ages 
+## Task 2. Make a select statement which returns all person's names and person's ages 
 from the city ‘[any]’
 ```
 SELECT (name, age)
@@ -89,7 +89,7 @@ FROM person WHERE address='kazan'
 ```
 ![image](https://github.com/piviich/db_practice/assets/144881369/e488163a-340b-498e-9273-dbe35a168449)
 
-##Task 3. Make a select statement which returns names , ages for all women from the 
+## Task 3. Make a select statement which returns names , ages for all women from the 
 city ‘[any]. Yep, and sort result by name
 
 ```
@@ -98,7 +98,7 @@ FROM person WHERE gender ='female' AND address='Moscow' ORDER BY name;
 ```
 ![image](https://github.com/piviich/db_practice/assets/144881369/cfde2245-7fb4-4645-99a5-f758244c1a8e)
 
-##Task 4.Make 2 syntax different select statements which return a list of pizzerias 
+## Task 4.Make 2 syntax different select statements which return a list of pizzerias 
 (pizzeria name and rating) with rating between 3.5 and 5 points (including 
 limit points) and ordered by pizzeria rating.
 ```
@@ -113,14 +113,14 @@ ORDER BY rating DESC;
 ```
 ![image](https://github.com/piviich/db_practice/assets/144881369/0fb77f7a-399d-4132-8a7e-a988377fc428)
 
-##Task 5. Make a select statement which returns the person's identifiers (without 
+## Task 5. Make a select statement which returns the person's identifiers (without 
 duplication) who visited pizzerias in a period from [any date period]
 (including all days) or visited pizzeria with identifier 2. Also include ordering 
 ```
 
 ```
 
-##Task 6 Make a select statement which returns person's names (based on internal 
+## Task 6 Make a select statement which returns person's names (based on internal 
 query in SELECT clause) who made orders for the menu with identifiers [3 
 dates and]. 
 ``` 
@@ -128,7 +128,7 @@ SELECT name FROM person WHERE id IN (SELECT person_id FROM person_order WHERE or
 ```
 ![image](https://github.com/piviich/db_practice/assets/144881369/b3026756-8a75-4442-b526-72d6f247f237)
 
-##Task 7. Make a select to person table that returning (true or false) if person_name == 
+## Task 7. Make a select to person table that returning (true or false) if person_name == 
 ‘[any]’ exists in table
 ```
 SELECT EXISTS (SELECT * FROM person WHERE name = 'Anna' ) AS Result;
