@@ -137,3 +137,4 @@ SELECT name FROM person WHERE id IN (SELECT person_id FROM person_order WHERE or
 SELECT EXISTS (SELECT * FROM person WHERE name = 'Anna' ) AS Result;
 
 ```
+![image](https://github.com/piviich/db_practice/assets/144881369/3c5dba6c-8e86-455e-b54b-2e696f30080e)
