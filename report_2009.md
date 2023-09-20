@@ -8,4 +8,16 @@ ORDER BY person,pizzeria
 ```
 ![image](https://github.com/piviich/db_practice/assets/144881369/859bf16d-9b8f-488c-8c30-1d3a25e992c9)
 
- ## Task 2. 
+ ## Task 2. change our SQL statement to return person names instead of person identifiers and change ordering by action_date in ascending mode and then by person_name in descending mode. 
+```
+SELECT name FROM person 
+CROSS JOIN person_visits
+ORDER BY visit_date,name DESC;
+
+```
+![image](https://github.com/piviich/db_practice/assets/144881369/6d31855b-621c-496c-92b5-832b854e0745)
+
+ ## Task 3. Please write a SQL statement which returns the date of order from the person_order table and corresponding person name (name and age are formatted as in the data sample below) which made an order from the person table. Add a sort by both columns in ascending mode.
+ ```
+
+```
