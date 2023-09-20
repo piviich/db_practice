@@ -36,8 +36,11 @@ ORDER BY order_date, person_information ASC;
 ```
 ![image](https://github.com/piviich/db_practice/assets/144881369/19b0b2f7-5160-49e6-b47e-26bcca716015)
 
- ## Task 5.
+ ## Task 5. Неполное
 
  ```
+SELECT name FROM person_order
+JOIN person ON person_order.person_id = person.id
+LEFT JOIN
 
 ```
