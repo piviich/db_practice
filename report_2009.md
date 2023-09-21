@@ -36,11 +36,17 @@ ORDER BY order_date, person_information ASC;
 ```
 ![image](https://github.com/piviich/db_practice/assets/144881369/19b0b2f7-5160-49e6-b47e-26bcca716015)
 
- ## Task 5. Неполное
+ ## Task 5. write 2 SQL statements which return a list of pizzerias names which have not been visited by persons by using IN for 1st one and EXISTS for the 2nd one.
 
  ```
-SELECT name FROM person_order
-JOIN person ON person_order.person_id = person.id
-LEFT JOIN
+SELECT pizzeria.name FROM pizzeria
+WHERE pizzeria.id NOT IN (SELECT pizzeria_id FROM person_visits)
+
+```
+![image](https://github.com/piviich/db_practice/assets/144881369/b4493079-27c3-4eea-9553-c0c7e85046a8)
+
+ ## Task 6. 
+ ```
+SELECT person.name FROM person_order JOIN person ON person_order.person_id=person.id
 
 ```
