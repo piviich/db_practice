@@ -45,8 +45,11 @@ WHERE pizzeria.id NOT IN (SELECT pizzeria_id FROM person_visits)
 ```
 ![image](https://github.com/piviich/db_practice/assets/144881369/b4493079-27c3-4eea-9553-c0c7e85046a8)
 
- ## Task 6. 
+ ## Task 6. Please write a SQL statement which returns a list of the person names which made an order for pizza in the corresponding pizzeria. The sample result (with named columns) is provided below and yes ... please make ordering by 3 columns (person_name, pizza_name, pizzeria_name) in ascending mode.
  ```
-SELECT person.name FROM person_order JOIN person ON person_order.person_id=person.id
+SELECT person.name,menu.pizza_name,pizzeria.name FROM person_order JOIN person ON person_order.person_id=person.id
+LEFT JOIN  menu ON menu.id=person_order.menu_id
+LEFT JOIN pizzeria ON pizzeria.id=menu.pizzeria_id
+
 
 ```
