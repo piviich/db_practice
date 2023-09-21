@@ -53,3 +53,5 @@ LEFT JOIN pizzeria ON pizzeria.id=menu.pizzeria_id
 
 
 ```
+![image](https://github.com/piviich/db_practice/assets/144881369/e96a1cae-4dba-4dd2-988d-82b15fd6d07b)
+
