@@ -4,7 +4,8 @@ SELECT DISTINCT pizzeria.name, rating FROM pizzeria
 CROSS JOIN menu
 WHERE pizzeria.id NOT IN (SELECT pizzeria_id FROM person_visits)
 ```
-![image](https://github.com/piviich/db_practice/assets/144881369/d634c7a3-906a-40a6-b285-ef9ac3c7cf6e)
+![image](https://github.com/piviich/db_practice/assets/144881369/b97b0347-634f-4c32-9a15-a19e61943d89)
+
 
  ## Task 2. 
 
