@@ -15,4 +15,5 @@ SELECT * FROM person_visits WHERE person_id = 1 OR person_id = 2 AND visit_date 
 ON missing_date = visit_date WHERE tab.person_id IS NULL
 ORDER BY missing_date
 ```
-![Uploading image.png…]()
+![image](https://github.com/piviich/db_practice/assets/144881369/bef24e9a-28dd-4490-afe8-0cf1be4a4efd)
+
