@@ -27,5 +27,5 @@ JOIN person_visits v ON po.person_id = v.person_id
 AND po.order_date = v.visit_date
 ORDER BY visit_date ASC, person_id DESC;
 ```
-![Uploading image.png…]()
+![image](https://github.com/piviich/db_practice/assets/144881369/75bca649-7bd5-48e2-a93c-b3432f111553)
 
