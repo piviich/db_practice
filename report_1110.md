@@ -25,5 +25,14 @@ ORDER BY name
  ## Task 3 Please create a Database View (with name v_generated_dates) which should be “store” generated dates from 1st to 31th of January 2022 in DATE type. Don’t forget about order for the generated_date column.
 
  ```
-
+CREATE view v_generated_dates AS
+SELECT date::date FROM generate_series ('2022-01-01', '2022-01-31', interval '1 day') AS date
 ```
+ ## Task 4. Please write a SQL statement which returns missing days for persons’ visits in January of 2022. Use v_generated_dates view for that task and sort the result by missing_date column. The sample of data is presented below.
+ ```
+SELECT * FROM v_generated_dates
+WHERE date NOT IN (SELECT visit_date FROM person_visits)
+ORDER BY date
+```
+
+![image](https://github.com/piviich/db_practice/assets/144881369/d51c0f68-f884-4f75-a93e-36219e5b77d2)
