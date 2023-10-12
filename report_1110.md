@@ -58,3 +58,13 @@ JOIN menu m ON po.menu_id = m.pizzeria_id
 ```
 ![image](https://github.com/piviich/db_practice/assets/144881369/f23b57de-d4da-4a44-8f99-4420a6a05d58)
 
+  ## Task 7. Please create a Materialized View mv_dmitriy_visits_and_eats (with data included) based on SQL statement that finds the name of pizzeria Dmitriy visited on January 8, 2022 and could eat pizzas for less than 800 rubles (this SQL you can find out at Day #02 Exercise #07).
+  ```
+CREATE Materialized View mv_dmitriy_visits_and_eats AS (
+SELECT p.name FROM pizzeria p
+JOIN person_visits pv ON p.id = pv.pizzeria_id
+JOIN person pe ON pv.person_id = pe.id
+JOIN menu m ON m.pizzeria_id = pv.pizzeria_id
+WHERE pe.name = 'Dmitriy' AND pv.visit_date = '2022-01-08' AND price <= 800)
+```
+![image](https://github.com/piviich/db_practice/assets/144881369/ff648745-d41f-479f-8c93-cc3ff5d003ee)
