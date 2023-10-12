@@ -49,4 +49,12 @@ SELECT * FROM v_symmetric_union
 ```
 ![image](https://github.com/piviich/db_practice/assets/144881369/a8773f54-e12f-4c32-8488-60a0000afb60)
 
- ## Task 6. 
+ ## Task 6. Please create a Database View v_price_with_discount that returns a person's orders with person names, pizza names, real price and calculated column discount_price (with applied 10% discount and satisfies formula price - price*0.1). The result please sort by person name and pizza name and make a round for discount_price column to integer type. Please take a look at a sample result below.
+ ```
+SELECT p.name,m.price,m.pizza_name, (m.price * 0.9) AS discount_price FROM person_order po 
+JOIN person p ON po.id=p.id 
+JOIN menu m ON po.menu_id = m.pizzeria_id
+
+```
+![image](https://github.com/piviich/db_practice/assets/144881369/f23b57de-d4da-4a44-8f99-4420a6a05d58)
+
