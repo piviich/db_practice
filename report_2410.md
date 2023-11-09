@@ -48,6 +48,16 @@ ORDER BY action_type
 ![image](https://github.com/piviich/db_practice/assets/144881369/d5db9756-a57b-40a3-b597-401f52b36a5d)
 
 
+  ## Task 04
 
+  ```
+SELECT p.name, count(pv.id) AS visits_count FROM person p
+JOIN person_visits pv ON pv.person_id = p.id
+group by 1
+```
+![image](https://github.com/piviich/db_practice/assets/144881369/90472d01-db92-4e41-a11e-361b15d40597)
 
+ ## Task 05
+ ```
 
+```
