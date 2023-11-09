@@ -67,18 +67,49 @@ ORDER BY name
 
  ## Task 06
  ```
+
 SELECT COUNT(po.order_date) AS Count_of_orders FROM person_order po
 	JOIN menu m ON m.id = po.id;
 
-SELECT AVG(m.price) as average_price,
-	MAX(m.price) as max_price,
-	MIN(m.price) as min_price
+SELECT round(AVG(m.price), 2) as average_price,
+	round(MAX(m.price), 2) as max_price,
+	round(MIN(m.price), 2) as min_price
 	FROM menu m
 GROUP BY m.pizzeria_id;
+
 
 
 ```
 ![image](https://github.com/piviich/db_practice/assets/144881369/84bdb446-40fa-4e33-98cf-232fe36b3a1d)
 
+ ## Task 07
+ ```
+SELECT round(AVG(rating), 4) AS global_rate FROM pizzeria
+
+```
+![image](https://github.com/piviich/db_practice/assets/144881369/cfbbab07-0e2e-43a0-b068-5fcfae1ce78d)
+
+ ## Task 08 
+
+ ```
+SELECT address, pi.name, COUNT(po.order_date) FROM person p
+JOIN pizzeria pi ON pi.id = p.id
+JOIN person_order po ON po.person_id = p.id 
+GROUP BY p.address, pi.name
+ORDER BY p.address;
 
 
+```
+![image](https://github.com/piviich/db_practice/assets/144881369/7ef78f3c-ca8f-470d-ae43-d5d99498114a)
+
+
+ ## Task 09
+ ```
+WITH formula_average AS (
+	SELECT p.address, (MAX(p.age) - (MIN(p.age) / MAX(p.age))) AS formula, ROUND(AVG(p.age),2)
+		AS average FROM person p
+		GROUP BY 1
+		)
+SELECT fa.address, fa.formula, fa.average, (fa.formula>fa.average) AS comparison FROM formula_average fa
+```
+![image](https://github.com/piviich/db_practice/assets/144881369/12594f2d-f080-496f-b989-9f5d9e56f8cd)
