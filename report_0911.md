@@ -31,3 +31,11 @@ FROM (
   ```
 
 ```
+
+  ## Task VIII
+
+  ```
+	ALTER TABLE person_discounts ADD CONSTRAINT ch_nn_person_id check (person_id IS NOT NULL)
+	ALTER TABLE person_discounts ADD CONSTRAINT ch_nn_value check ( value IS NOT NULL)
+	INSERT INTO person_discounts VALUES (1,2,3);
+```
