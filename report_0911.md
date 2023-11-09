@@ -12,7 +12,7 @@ value FLOAT not null,
  ## Task V So, there is a table person_order that stores the history of a person's orders. Please write a DML statement (INSERT INTO ... SELECT ...) that makes inserts new records into person_discounts table based on the next rules.
 
  ```
-INSERT INTO person_discounts (person_id, pizzeria_id, discount)
+INSERT INTO person_discounts (person_id, pizzeria_id, value)
 SELECT person_id, pizzeria_id,
 	case
 		WHEN amount_of_orders = 1 THEN 10.5
