@@ -1,10 +1,10 @@
  ## Task IV Let’s expand our data model to involve a new business feature. Every person wants to see a personal discount and every business wants to be closer for clients.
  ```
-CREATE TABLE person_discounts
-(
-	id INT PRIMARY KEY NOT NULL,
-	person_id INT,
-	pizzeria_id INT,
+CREATE TABLE person_discounts (
+id BIGINT PRIMARY KEY,
+person_id bigint,
+pizzeria_id bigint,
+value FLOAT not null,
 	constraint fk_person_discounts_person_id FOREIGN KEY (person_id) references person(id),
 	constraint fk_person_discounts_pizzeria_id FOREIGN KEY (pizzeria_id) references pizzeria(id)
 	);
