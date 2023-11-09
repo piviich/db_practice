@@ -65,6 +65,12 @@ insert into menu values (1,'Caesar Salad', 5.99, 'Classic Caesar salad with fres
 insert into menu values (2,'Margherita Pizza', 8.99, 'Traditional Italian pizza with tomato sauce, mozzarella cheese, and fresh basil', 2);
 insert into menu values (3,'Chocolate Brownie', 4.99, 'Warm chocolate brownie with vanilla ice cream and chocolate sauce', 3);
 insert into menu values (4,'Iced Tea', 2.99, 'Refreshing iced tea with lemon and mint', 4);
+insert into menu values (5, 'Pasta carbonara', 250, 'Pasta with bacon, parmesan and cream', 5),
+insert into menu values (6, 'Beef Steak', 500, 'Juicy steak with garnish and sauce', 6),
+insert into menu values (7, 'Chicken Caesar', 200, 'Salad with chicken, croutons and Caesar sauce', 7),
+insert into menu values (8, 'Lasagna', 300, 'Meat lasagna with tomato sauce and cheese', 8),
+insert into menu values (9, 'Sushi Set', 400, 'Assorted Sushi', 9),
+insert into menu values (10, 'Tiramisu', 150, 'Italian dessert with mascarpone', 10);
 
 
 CREATE TABLE personnel
