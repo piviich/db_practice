@@ -224,6 +224,22 @@ INSERT INTO orders VALUES (5, 1, 5, 5, 5, 2);
 
 
 ```
+  ## TRIGGER.
+
+```
+
+
+CREATE OR REPLACE FUNCTION fnc_orders_after_edit() RETURNS TRIGGER AS $trg_orders_after_edit$
+	BEGIN
+		INSERT INTO orders (id, waiter_id, menu_id, check_id, client_id, amount)
+		VALUES (NEW.sum_of_order,NEW.id);
+		RETURN NULL;
+	END;
+$trg_orders_after_edit$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trg_orders_after_edit AFTER INSERT ON checks
+	FOR EACH ROW EXECUTE FUNCTION fnc_orders_after_edit();
+```
 
 
 
