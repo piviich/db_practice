@@ -241,6 +241,54 @@ CREATE TRIGGER trg_orders_after_edit AFTER INSERT ON checks
 	FOR EACH ROW EXECUTE FUNCTION fnc_orders_after_edit();
 ```
 
+```
+CREATE OR REPLACE FUNCTION remove_order_from_check()
+RETURNS TRIGGER AS $$
+BEGIN
+    UPDATE checks
+    SET sum_of_order = sum_of_order - (OLD.amount * menu.price)
+    FROM menu
+    WHERE checks.id = OLD.check_id AND menu.id = OLD.menu_id;
+    RETURN OLD;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER remove_order_from_check_trigger
+AFTER DELETE ON orders
+FOR EACH ROW EXECUTE FUNCTION remove_order_from_check();
+```
+
+```
+CREATE OR REPLACE FUNCTION update_check_sum_of_order()
+RETURNS TRIGGER AS $$
+BEGIN
+    UPDATE checks
+    SET sum_of_order = sum_of_order + (NEW.amount * menu.price)
+    FROM menu
+    WHERE checks.id = NEW.check_id AND menu.id = NEW.menu_id;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER update_check_sum_of_order_trigger
+AFTER INSERT ON orders
+FOR EACH ROW EXECUTE FUNCTION update_check_sum_of_order();
+```
+```
+CREATE OR REPLACE FUNCTION update_sum_of_order_function()
+RETURNS TRIGGER AS $$
+BEGIN
+    UPDATE checks
+    SET sum_of_order = NEW.sum_of_order
+    WHERE id = NEW.id;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER update_sum_of_order
+AFTER INSERT ON checks
+FOR EACH ROW EXECUTE FUNCTION update_sum_of_order_function();
+```
 
 
 
