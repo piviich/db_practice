@@ -293,7 +293,7 @@ FOR EACH ROW EXECUTE FUNCTION update_sum_of_order_function();
 
   ##ОТЧЕТ
 
-[Uploading отчет по учебной практике.docx…]()
+
 
   
 
