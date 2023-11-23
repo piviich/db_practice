@@ -286,7 +286,7 @@ END;
 $$ LANGUAGE plpgsql;
 
 CREATE TRIGGER update_sum_of_order
-AFTER INSERT ON checks
+AFTER INSERT ON orders
 FOR EACH ROW EXECUTE FUNCTION update_sum_of_order_function();
 ```
 --------------------------------------------------------------------------------
