@@ -87,8 +87,7 @@ WHERE
   price > 10.0;
 
 CREATE INDEX btree_price_index ON menu (price);
-
-//Индекс будет ускорять операции поиска и сортировки по цене в этой таблице.//
+Индекс будет ускорять операции поиска и сортировки по цене в этой таблице.
  
 CREATE TABLE personnel (
     id INT PRIMARY KEY NOT NULL,
